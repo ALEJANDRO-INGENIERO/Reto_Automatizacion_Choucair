@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">RetoTecnico</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="e1b736c7d8d6efc0f7b02fa39f74bb41_urces_sl_features_sl_loginuser.html">Loguearse En El Sistema</a></span>
+                > <span class="truncate-60"><a
+                    href="5b455c6ced1b93c3f78f9b597ee1dfe9_chrome_comma_windows_loginuser.html">Registrar un candidato </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="d782c44557441225cc92a5e35bf4b23b_requirement_type_feature.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 11-11-2024 20:21</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Loguearse En El Sistema </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="b587a0a9274f8b6e3d8e0bb0ae8cb9bf_context_chrome.html">Chrome
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="a396efb27cdfe5a722be3d67da3e0319_context_windows.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="3d4ca96b5e06fa60fd1e597ad196dfb3_tag_login.html">Login
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="90b10304d9f7ccdecec6a6c10a2b8ded_duration_30_to_60_seconds.html">30 To 60 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="07c067845c6f898f40ebf27a88f3f295_tag_registro.html">Registro
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="e54337ba32bd5d52b2c4a3afe4819b97_context_chrome_c__windows.html">Chrome, Windows
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Registrar un candidato
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">When el usuario ingresa su nombre de usuario &quot;Admin&quot; y contraseña &quot;admin123&quot;<br>When el usuario ingresa los datos del candidato<br><table class='embedded'><thead><th>fullname</th><th>middle</th><th>lastname</th><th>vacancy</th><th>email</th><th>contactnumber</th><th>keywords</th><th>notes</th></thead><tbody><tr><td>&lt;fullname&gt;</td><td>&lt;middle&gt;</td><td>&lt;lastname&gt;</td><td>&lt;vacancy&gt;</td><td>&lt;email&gt;</td><td>&lt;contactnumber&gt;</td><td>&lt;keywords&gt;</td><td>&lt;notes&gt;</td></tr></tbody></table><br>Then el sistema valida los datos del candidato</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="9e4bba62ce03eeef3b35ea7910a28e88d930360f85bcc383ffc6a3a276bba33d.png" title=" 1: Registrar un candidato ({fullname=John, middle=Pedro, lastname=Smith, vacancy=Developer, email=john.smith@email.com, contactnumber=555-1234, keywords=Java, SQL, notes=N/A})" width="0"/>
+                <img src="9e4bba62ce03eeef3b35ea7910a28e88d930360f85bcc383ffc6a3a276bba33d.png" title=" Given el usuario ingresa a la p&aacute;gina de login" width="0"/>
+                <img src="9e4bba62ce03eeef3b35ea7910a28e88d930360f85bcc383ffc6a3a276bba33d.png" title=" Actor opens the browser at https://opensource-demo.orangehrmlive.com/web/index.php/auth/login" width="0"/>
+                <img src="9e4bba62ce03eeef3b35ea7910a28e88d930360f85bcc383ffc6a3a276bba33d.png" title=" Given el usuario ingresa a la p&aacute;gina de login (completed)" width="0"/>
+                <img src="11d80b9ea7f6f84e697f119376a37e20a45cf906c013710710c2951bf6fca2d6.png" title=" When el usuario ingresa su nombre de usuario &quot;Admin&quot; y contrase&ntilde;a &quot;admin123&quot;" width="0"/>
+                <img src="4bf7e8c22fd8cd5b5810801facebaa73a44d59e0e909d2a8ccecf3f16943a40d.png" title=" Actor ingresa sus credenciales" width="0"/>
+                <img src="32e29af756aa64e5fe3a728f5c326918f37e33a377f5a9f12e4cbf14526316ed.png" title=" Actor enters 'Admin' into " width="0"/>
+                <img src="eb679afbe772cadc6a26eb7723e25194d4a6a0a7f657afef42c785b72f9e4002.png" title=" Actor enters 'Admin' into " width="0"/>
+                <img src="a4303de7a3fd97f03b10c7db077f8cec5ea9c3ca5416ab3ed7dcb894de091f5d.png" title=" Actor enters 'Admin' into  (completed)" width="0"/>
+                <img src="9b1bdd8b2525f6f2623db81bd6cfb139aa466e29f76ca3dfd046881b25a5b2c9.png" title=" Actor enters 'admin123' into " width="0"/>
+                <img src="4bcebec5e5237c0ce86ccae2f583f10f1296a7a2ca5df085fb465b868200adb2.png" title=" Actor enters 'admin123' into  (completed)" width="0"/>
+                <img src="4bcebec5e5237c0ce86ccae2f583f10f1296a7a2ca5df085fb465b868200adb2.png" title=" Actor clicks on " width="0"/>
+                <img src="9e4bba62ce03eeef3b35ea7910a28e88d930360f85bcc383ffc6a3a276bba33d.png" title=" Actor clicks on " width="0"/>
+                <img src="3ae5e4faa7a642917c91a2f36e40faf6399900d4dd08cb9c824fa70c90dbe67b.png" title=" Actor clicks on  (completed)" width="0"/>
+                <img src="3ae5e4faa7a642917c91a2f36e40faf6399900d4dd08cb9c824fa70c90dbe67b.png" title=" Actor ingresa sus credenciales (completed)" width="0"/>
+                <img src="92f957a39ebdd5c63d8f06ac963c7182fb04d8d6dc05b59c149c748bf710ac6d.png" title=" When el usuario ingresa su nombre de usuario &quot;Admin&quot; y contrase&ntilde;a &quot;admin123&quot; (completed)" width="0"/>
+                <img src="92f957a39ebdd5c63d8f06ac963c7182fb04d8d6dc05b59c149c748bf710ac6d.png" title=" When el usuario ingresa los datos del candidato
+| fullname | middle | lastname | vacancy | email | contactnumber | keywords | notes |
+| John | Pedro | Smith | Developer | john.smith@email.com | 555-1234 | Java, SQL | N/A |" width="0"/>
+                <img src="8f1d6df49949d59ceaee829d3dc7bb0aa3314429251ba3e178c677fa89a3d8f7.png" title=" Actor registro candidatos" width="0"/>
+                <img src="8f1d6df49949d59ceaee829d3dc7bb0aa3314429251ba3e178c677fa89a3d8f7.png" title=" Actor clicks on " width="0"/>
+                <img src="31a3e1beb819000c9f5acb1dc5456bd1630dd7edc48b88cca41f75c0ce3868f8.png" title=" Actor clicks on  (completed)" width="0"/>
+                <img src="31a3e1beb819000c9f5acb1dc5456bd1630dd7edc48b88cca41f75c0ce3868f8.png" title=" Actor clicks on " width="0"/>
+                <img src="9e4bba62ce03eeef3b35ea7910a28e88d930360f85bcc383ffc6a3a276bba33d.png" title=" Actor clicks on  (completed)" width="0"/>
+                <img src="dbb01012372ded4887ab17b4bdd2bbe6216c2f6074c844926d0c7725b58dd6be.png" title=" Actor enters 'John' into " width="0"/>
+                <img src="e7a7891c67e1c57fe98a747376ddb53d6b989f471072fee3781ac10be68d66c9.png" title=" Actor enters 'John' into  (completed)" width="0"/>
+                <img src="f741300e829e84aec562d2318a695a66ac63128b6d4f4892b1e78978bc0f2334.png" title=" Actor enters 'Pedro' into " width="0"/>
+                <img src="52ec9dc7f1072c197405b56874c9b9f6259e7028d3b158f859dd035dc20e860f.png" title=" Actor enters 'Pedro' into  (completed)" width="0"/>
+                <img src="dfa108b21ac92d28fa1c0bfd5d4ce22cceacc6bb5990e05ec5e3d43dfc5dd3d2.png" title=" Actor enters 'Smith' into " width="0"/>
+                <img src="4c48b10ea9902408b2a42071c97592f077af742ba322b6af1a38141d87fb8651.png" title=" Actor enters 'Smith' into  (completed)" width="0"/>
+                <img src="4c48b10ea9902408b2a42071c97592f077af742ba322b6af1a38141d87fb8651.png" title=" Actor clicks on " width="0"/>
+                <img src="671c1138c743e04906991df3079dd3380c866c617e50c7c175f4a988be742dd3.png" title=" Actor clicks on  (completed)" width="0"/>
+                <img src="aa6da7864187d61b9ab96cd04492e37d0785743a7cb23f3766b4c0920120796f.png" title=" Actor enters 'john.smith@email.com' into " width="0"/>
+                <img src="9b8f98323cae19c042d2afea852d495a69105cebb7e3e93f9f7d4b9d9cacb038.png" title=" Actor enters 'john.smith@email.com' into " width="0"/>
+                <img src="671c1138c743e04906991df3079dd3380c866c617e50c7c175f4a988be742dd3.png" title=" Actor enters 'john.smith@email.com' into  (completed)" width="0"/>
+                <img src="5e4f065b941b263cc629f1f6009ebdc7823d38622c9be59adbf946223f1e753e.png" title=" Actor enters '555-1234' into " width="0"/>
+                <img src="5ae7e5359b4bb895683ec8a41de6025b6c34a9c6ea19d409e2791b62532f5e55.png" title=" Actor enters '555-1234' into " width="0"/>
+                <img src="c48379a92dded8fbe23a3e85f8b760900178e3c4c98f1c997521297a81e3da90.png" title=" Actor enters '555-1234' into  (completed)" width="0"/>
+                <img src="c48379a92dded8fbe23a3e85f8b760900178e3c4c98f1c997521297a81e3da90.png" title=" Actor enters 'C:\Users\omar1\OneDrive\Documentos\Selenium.pdf' into " width="0"/>
+                <img src="b8d56e534c67b51d448d44401ad03915f754c1d10cb3d7c4f57e466117d97616.png" title=" Actor enters 'C:\Users\omar1\OneDrive\Documentos\Selenium.pdf' into  (completed)" width="0"/>
+                <img src="dccae7bbfcfe08a61a9c7b7a7c2d8cb25e3194392f437ba88d73b8a1befdea75.png" title=" Actor enters 'Java, SQL' into " width="0"/>
+                <img src="e6a40a55d4dbe52fd35fda24a2613d357cecc0b0a2f7e2a52069d2daf15f565d.png" title=" Actor enters 'Java, SQL' into  (completed)" width="0"/>
+                <img src="e8b5156cb9bb8747d4eac5b54474e8a78fda62805ec3c90b0b4aac299e63244b.png" title=" Actor enters 'N/A' into " width="0"/>
+                <img src="01fab577340b67caf4ce120fa4c3b506018028119f76b7f9b6b33b22992c9b40.png" title=" Actor enters 'N/A' into " width="0"/>
+                <img src="afae10cfdc99fd752d964ea7d0edcf35ccf29c7b03250e4b28558a26c3d5f74d.png" title=" Actor enters 'N/A' into  (completed)" width="0"/>
+                <img src="7947d657f8e33782227ce18beda3eb580a65213606b8935a998221ab795369a8.png" title=" Actor enters '' into " width="0"/>
+                <img src="6947721a3192e089d0477cbeeeac18df981068b3a8a5f1ac1243d33a76b89fc0.png" title=" Actor enters '' into " width="0"/>
+                <img src="0147891db8dfba7d5380bac43f77f41de65f0cdfa2909622d5f4d97675c79ce5.png" title=" Actor enters '' into  (completed)" width="0"/>
+                <img src="0147891db8dfba7d5380bac43f77f41de65f0cdfa2909622d5f4d97675c79ce5.png" title=" Actor clicks on Consent checkbox" width="0"/>
+                <img src="94f9bcbbf33811ff4c7e08e5372f189502adf4d0217f2a3fb0992f9a2848ac0b.png" title=" Actor clicks on Consent checkbox (completed)" width="0"/>
+                <img src="94f9bcbbf33811ff4c7e08e5372f189502adf4d0217f2a3fb0992f9a2848ac0b.png" title=" Actor clicks on Consent checkbox" width="0"/>
+                <img src="7114fc6b6c082ee8a229e5c08433e2b3fbcb425024ee55e20870e40c2ba2cd34.png" title=" Actor clicks on Consent checkbox (completed)" width="0"/>
+                <img src="7114fc6b6c082ee8a229e5c08433e2b3fbcb425024ee55e20870e40c2ba2cd34.png" title=" Actor registro candidatos (completed)" width="0"/>
+                <img src="b02ab5b17c5f2a23c8a0719d6d0540fcb40e174df09a9764d192b5511f437633.png" title=" When el usuario ingresa los datos del candidato
+| fullname | middle | lastname | vacancy | email | contactnumber | keywords | notes |
+| John | Pedro | Smith | Developer | john.smith@email.com | 555-1234 | Java, SQL | N/A | (completed)" width="0"/>
+                <img src="b02ab5b17c5f2a23c8a0719d6d0540fcb40e174df09a9764d192b5511f437633.png" title=" Then el sistema valida los datos del candidato" width="0"/>
+                <img src="d25ab21544e202150fe3f0d4ac8a59bac262689323465525ceaee5a2aac42e0b.png" title=" Then el sistema valida los datos del candidato (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.9.8</span>
+</div>
+</body>
+</html>

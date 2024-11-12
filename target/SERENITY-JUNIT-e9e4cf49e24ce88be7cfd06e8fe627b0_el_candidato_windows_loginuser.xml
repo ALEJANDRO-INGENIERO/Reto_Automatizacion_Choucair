@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="Loguearse en el sistema" skipped="0" tests="1" time="1.0" timestamp="2024-11-10 09:24:11"><testcase name="Registrar datos del candidato"><error type="java.lang.NullPointerException"/><system-err>null&#13;
+com.google.common.base.Preconditions.checkNotNull(Preconditions.java:903)&#13;
+co.co.choucair.reto.stepdefinitions.RegistroCandidato.elUsuarioIngresaLosDatosDelCandidato(RegistroCandidato.java:14)&#13;
+✽.el usuario ingresa los datos del candidato(file:///C:/Users/omar1/IdeaProjects/co.co.choucair.reto/src/test/resources/features/loginUser.feature:19)&#13;
+</system-err></testcase></testsuite>
